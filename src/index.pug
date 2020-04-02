@@ -8,25 +8,9 @@ html(lang="en")
     title Rock Paper Scissors Game 
   body
     include _component/header/header.pug
-    .score-counter
-      #user-label.badge user
-      #computer-label.badge comp
-      span#user-score 0
-      | :
-      span#computer-score 0
-
-    .message-result
-      p Rock destroy scissor. User win!
-
-    .choice
-      .first-choice#paper-hand
-        img(src="https://i.ibb.co/CnVBxjh/paper.jpg", alt="" width="100" height="100")
-
-      .second-choiche#rock-hand
-        img(src="https://i.ibb.co/61jtRf3/rock.png", alt="" width="100" height="100")
-
-      .third-choice#scissors-hand
-        img(src="https://i.ibb.co/RQZh494/scissors.png", alt="" width="100" height="100")
+    include _component/score-counter/score-counter
+    include _component/result-message/result-message
+    include _component/choice/choice.pug
 
     #destiny-message
       p Choose your destiny wise.
